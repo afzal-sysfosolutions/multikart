@@ -33,11 +33,11 @@ const fetchData = async () => {
     const response = await axios.post("https://primeorbitai.com/APP/API/api/WorkForce/CreateMT5Account", {ClientId: 1, procName: 'CreateMT5Account',}, {
       headers: { "Content-Type": "application/json" },
     }); // Base URL already set
-    console.log(response.data);
+
   } catch (err) {
-    console.log(err.message);
+
   } finally {
-    console.log(false);
+
   }
 };
 
