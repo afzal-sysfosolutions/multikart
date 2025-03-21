@@ -53,19 +53,18 @@ const Fashion1 = () => {
     <>
       {/* Home Banner */}
       <WrapperComponent classes={{ sectionClass: "p-0 overflow-hidden position-relative", fluidClass: "slide-1 home-slider" }}>
-        <HomeSlider bannerData={dashboardData?.content?.home_banner} height={650} width={1920} />
+        <HomeSlider height={650} width={1920} />
       </WrapperComponent>
 
       {/* Offer Banners */}
       <WrapperComponent classes={{ sectionClass: "pb-0 ratio2_1 banner-section", fluidClass: "container" }}>
         <Row className="g-sm-4 g-3">
-          {dashboardData?.content?.offer_banner?.banner_1?.status && (
             <div className={dashboardData?.content?.offer_banner?.banner_1?.status ? "col-6" : "col-12"}>
               <div className="position-relative">
                 <Link className="h-100" href={'category/men?category=1003'}>
                 <Image className="bg-img w-100 img-fluid" src={dashboardData?.content?.offer_banner?.banner_1?.image_url} height={338} width={676} /> 
                 </Link>
-                {/* <ImageLink imgUrl={dashboardData?.content?.offer_banner?.banner_1} placeholder={`${ImagePath}/two_column_banner.png`} height={338} width={676} /> */}
+                {/* <ImageLink imgUrl={dashboardData?.content?.offer_banner?.banner_1?.image_url} placeholder={`${ImagePath}/two_column_banner.png`} height={338} width={676} /> */}
                 <div className="banner-skeleton">
                   <div className="skeleton-content">
                     <p className="card-text placeholder-glow row g-lg-3 g-0">
@@ -80,8 +79,6 @@ const Fashion1 = () => {
                 </div>
               </div>
             </div>
-          )}
-          {dashboardData?.content?.offer_banner?.banner_2?.status && (
             <div className={dashboardData?.content?.offer_banner?.banner_2?.status ? "col-6" : "col-12"}>
               <div className="position-relative">
               <Link className="h-100" href={'category/men?category=1002'}>
@@ -102,7 +99,6 @@ const Fashion1 = () => {
                 </div>
               </div>
             </div>
-          )}
         </Row>
       </WrapperComponent>
 
