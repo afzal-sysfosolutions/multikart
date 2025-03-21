@@ -82,7 +82,7 @@ const Fashion1 = () => {
             <div className={dashboardData?.content?.offer_banner?.banner_2?.status ? "col-6" : "col-12"}>
               <div className="position-relative">
               <Link className="h-100" href={'category/men?category=1002'}>
-              <Image className="bg-img w-100 img-fluid" src={dashboardData?.content?.offer_banner?.banner_2?.image_url} height={338} width={676} /> 
+              <Image className="bg-img w-100 img-fluid" src={dashboardData?.content?.offer_banner?.banner_1?.image_url} height={338} width={676} /> 
               </Link>
                 {/* <ImageLink imgUrl={dashboardData?.content?.offer_banner?.banner_2} placeholder={`${ImagePath}/two_column_banner.png`} height={338} width={676} /> */}
                 <div className="banner-skeleton">
