@@ -67,7 +67,7 @@ export const dashboardData = {
         },
         "banner_2": {
           "status": true,
-          "image_url": "/assets/images/theme/fashion_one/Women_Collection.png",
+          "image_url": "/assets/images/theme/fashion_one/Women_Cateimg.png",
           "redirect_link": {
             "link": "women",
             "link_type": "collection"
