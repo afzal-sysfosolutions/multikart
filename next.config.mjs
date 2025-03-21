@@ -4,7 +4,8 @@ const nextConfig = {
   // basePath: "/Multikart/userarea",
   // assetPrefix: "/Multikart/userarea",
   env: {
-    storageURL: process.env.NEXT_PUBLIC_STORAGE_URL ||  "http://localhost:3000" ,
+    // storageURL: process.env.NEXT_PUBLIC_STORAGE_URL ||  "http://localhost:3000" ,
+    storageURL:"http://localhost:3000" ,
   },
 
   images: {

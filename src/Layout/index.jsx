@@ -28,23 +28,23 @@ const MainLayout = ({ children }) => {
     return Math.random().toString(36).substr(2, 16); // Random ID generate
 }
 
-const fetchData = async () => {
-  try {
-    const response = await axios.post("https://primeorbitai.com/APP/API/api/WorkForce/CreateMT5Account", {ClientId: 1, procName: 'CreateMT5Account',}, {
-      headers: { "Content-Type": "application/json" },
-    }); // Base URL already set
+// const fetchData = async () => {
+//   try {
+//     const response = await axios.post("https://primeorbitai.com/APP/API/api/WorkForce/CreateMT5Account", {ClientId: 1, procName: 'CreateMT5Account',}, {
+//       headers: { "Content-Type": "application/json" },
+//     }); // Base URL already set
 
-  } catch (err) {
+//   } catch (err) {
 
-  } finally {
+//   } finally {
 
-  }
-};
+//   }
+// };
 
 
   useEffect(() => {
     
-    fetchData();
+    // fetchData();
     let cookies = document.cookie.split("; ").find(row => row.startsWith("userID="));
 
     if (!cookies) {
