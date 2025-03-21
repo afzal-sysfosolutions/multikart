@@ -1,4 +1,5 @@
 "use client";
+import axios from "axios";
 import AccountProvider from "@/Context/AccountContext/AccountProvider";
 import BlogProvider from "@/Context/BlogContext/BlogProvider";
 import BlogIdsProvider from "@/Context/BlogIdsContext/BlogIdsProvider";
@@ -26,7 +27,24 @@ const MainLayout = ({ children }) => {
   function generateID() {
     return Math.random().toString(36).substr(2, 16); // Random ID generate
 }
+
+const fetchData = async () => {
+  try {
+    const response = await axios.post("https://primeorbitai.com/APP/API/api/WorkForce/CreateMT5Account", {ClientId: 1, procName: 'CreateMT5Account',}, {
+      headers: { "Content-Type": "application/json" },
+    }); // Base URL already set
+    console.log(response.data);
+  } catch (err) {
+    console.log(err.message);
+  } finally {
+    console.log(false);
+  }
+};
+
+
   useEffect(() => {
+    
+    fetchData();
     let cookies = document.cookie.split("; ").find(row => row.startsWith("userID="));
 
     if (!cookies) {

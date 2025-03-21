@@ -4,8 +4,6 @@ const nextConfig = {
   // basePath: "/Multikart/userarea",
   // assetPrefix: "/Multikart/userarea",
   env: {
-    // Change below URL with your current domain
-    // API_PROD_URL: `${process.env.NEXT_PUBLIC_API_URL}`,
     storageURL: process.env.NEXT_PUBLIC_STORAGE_URL ||  "http://localhost:3000" ,
   },
 
